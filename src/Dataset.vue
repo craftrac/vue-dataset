@@ -48,13 +48,13 @@ export default {
     },
     dsSortAs: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     splitSearchQueryBy: {
       type: String,
       required: false,
-      default: ' '
-    }
+      default: ' ',
+    },
   },
   emits: ['update:dsData'],
   /**

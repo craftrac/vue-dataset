@@ -9,20 +9,18 @@
 </template>
 
 <script setup>
-import { debounce } from './helpers'
-
 import { inject, ref } from 'vue'
 import { debounce } from './helpers'
 
 const props = defineProps({
   dsSearchPlaceholder: {
     type: String,
-    default: ''
+    default: '',
   },
   wait: {
     type: Number,
-    default: 0
-  }
+    default: 0,
+  },
 })
 
 const search = inject('search')
@@ -32,10 +30,4 @@ const dsSearch = ref('')
 const input = debounce((value) => {
   search(value)
 }, props.wait)
-    return {
-      dsSearch,
-      input,
-    }
-  },
-}
 </script>

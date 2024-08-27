@@ -1,6 +1,6 @@
 <template>
   <component :is="tag">
-    <template v-for="(rowIndex, i) in dsRows">
+    <template v-for="(rowIndex, i) in dsRows" :key="rowIndex">
       <slot :row="dsData[rowIndex]" :row-index="rowIndex" :index="indexes[i]"></slot>
     </template>
     <slot v-if="!dsRows.length" name="noDataFound"></slot>
